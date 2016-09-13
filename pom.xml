@@ -47,12 +47,10 @@
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
-                    <compilerArguments>
-                        <bootclasspath>${sun.boot.class.path}${path.separator}${java.home}/lib/jfxrt.jar</bootclasspath>
-                    </compilerArguments>
                 </configuration>
             </plugin>
             
+            <!-- Packages project dependencies into a single JAR -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
@@ -139,6 +137,7 @@
                     </execution>
                 </executions>
             </plugin>
+            
             <!-- Executes Tests -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
